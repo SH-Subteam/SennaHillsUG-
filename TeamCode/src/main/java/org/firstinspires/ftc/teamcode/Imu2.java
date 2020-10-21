@@ -53,7 +53,7 @@ public class Imu2 extends LinearOpMode {
         while ((Math.abs(getHeading())-Math.abs(startingAngle)) <= degrees && opModeIsActive()){
             telemetry.addData("Heading", getHeading());
             telemetry.update();
-            //sleep(3000);
+            sleep(3000);
         }
 
     }
@@ -67,6 +67,7 @@ public class Imu2 extends LinearOpMode {
         while ((getHeading()-startingAngle )<= degrees && opModeIsActive()){
         }
         //stop all motors
+        sleep(3000);
     }
     public double getHeading() {
         Orientation angles = imu.getAngularOrientation(AxesReference.EXTRINSIC, AxesOrder.ZYX, AngleUnit.DEGREES);

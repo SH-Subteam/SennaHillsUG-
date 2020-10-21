@@ -25,6 +25,7 @@ public class AutoWithEncoders extends LinearOpMode {
 
         waitForStart();
 
+        //Going forward for 30 cm (1 foot), going backwards 30 cm (1 foot), then going forward and back 90 cm (3 feet)
         encoderDrive(0.5, 30, 30, 30);
         encoderDrive(-0.5, 30, 30, 30);
         encoderDrive(0.5,90, 90, 30);

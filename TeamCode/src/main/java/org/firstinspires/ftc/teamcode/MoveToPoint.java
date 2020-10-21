@@ -136,10 +136,5 @@ public class MoveToPoint extends LinearOpMode {
         currentPosY = yCoord;
 
         sleep(500);
-
-
-
-
-
     }
 }
