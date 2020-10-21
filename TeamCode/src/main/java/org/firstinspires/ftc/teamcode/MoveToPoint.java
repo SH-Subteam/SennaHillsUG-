@@ -123,19 +123,20 @@ public class MoveToPoint extends LinearOpMode {
         //Turn
         turnWithPID(angle, 0.085, 0, 0.0001, 1);
 
-        robot.setPowerOfAllMotorsTo(0);
+        sleep(500);
 
         //Move
         encoderDrive(0.4, hypotenuse, hypotenuse, 100);
 
-        robot.setPowerOfAllMotorsTo(0);
+        sleep(500);
 
         //Turn to heading
         turnWithPID(heading, 0.085, 0, 0.0001, 1);
         currentPosX = xCoord;
         currentPosY = yCoord;
 
-        robot.setPowerOfAllMotorsTo(0);
+        sleep(500);
+
 
 
 
