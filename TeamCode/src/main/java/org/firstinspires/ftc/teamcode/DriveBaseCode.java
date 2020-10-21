@@ -17,6 +17,7 @@ public class DriveBaseCode extends LinearOpMode {
 
         while (opModeIsActive()) {
 
+            //Arcade style controls...
             robot.rightMotor.setPower(gamepad1.left_stick_x + gamepad1.left_stick_y);
             robot.leftMotor.setPower(gamepad1.left_stick_x - gamepad1.left_stick_y);
 

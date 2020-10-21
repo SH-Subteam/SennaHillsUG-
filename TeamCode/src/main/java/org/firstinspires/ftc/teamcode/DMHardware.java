@@ -56,6 +56,7 @@ public class DMHardware {
     // Method to set the power of all of the motors...
 
     public void setPowerOfAllMotorsTo(double speed) {
+        //We only have two motors...
         leftMotor.setPower(speed);
         rightMotor.setPower(speed);
     }
