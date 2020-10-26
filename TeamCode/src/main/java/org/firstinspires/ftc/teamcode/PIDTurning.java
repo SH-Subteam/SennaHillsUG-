@@ -58,7 +58,7 @@ public class PIDTurning extends LinearOpMode {
     public void turnWithPID(double targetAngle, double kp, double ki, double kd, double threshold) {
         // P is responsible for changing the speed relative to the error
         // I is responsible for the accumulated error (I think)
-        // D makes the response to the error an exponential vurve, rather than a line
+        // D makes the response to the error an exponential curve, rather than a line
 
         double error = targetAngle - getHeading();
         double sum = error;
