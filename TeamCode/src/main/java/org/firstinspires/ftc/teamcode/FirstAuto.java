@@ -13,6 +13,8 @@ public class FirstAuto extends LinearOpMode {
         robot.initTeleOpIMU(hardwareMap);
         robot.timer.reset();
 
+        waitForStart();
+
         robot.setPowerOfAllMotorsTo(0.3);
 
         while (robot.getTime() <= 5) {
