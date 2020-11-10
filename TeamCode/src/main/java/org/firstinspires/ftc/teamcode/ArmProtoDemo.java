@@ -1,5 +1,6 @@
 package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
@@ -14,19 +15,23 @@ public class ArmProtoDemo extends LinearOpMode {
 
         waitForStart();
 
-        if (gamepad1.y) {
-            robot.ringArm.setPosition(0.9);
-        }
-        if (gamepad1.a) {
-            robot.ringArm.setPosition(0);
-        }
+        while (opModeIsActive()) {
+
+            if (gamepad1.y) {
+                robot.ringArm.setPosition(0.9);
+            }
+            if (gamepad1.a) {
+                robot.ringArm.setPosition(0);
+            }
 
 
-        if (gamepad1.x) {
-            robot.ringClaw.setPosition(0.5);
-        }
-        if (gamepad1.b) {
-            robot.ringClaw.setPosition(0.7);
+            if (gamepad1.x) {
+                robot.ringClaw.setPosition(0.5);
+            }
+            if (gamepad1.b) {
+                robot.ringClaw.setPosition(0.7);
+            }
+
         }
     }
 
