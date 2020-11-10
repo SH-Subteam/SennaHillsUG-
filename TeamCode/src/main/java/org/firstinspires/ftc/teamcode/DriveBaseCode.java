@@ -22,10 +22,10 @@ public class DriveBaseCode extends LinearOpMode {
             robot.leftMotor.setPower(gamepad1.left_stick_x - gamepad1.left_stick_y);
 
             if (gamepad1.right_bumper) {
-                robot.claw.setPosition(0.8);
+                robot.baseClaw.setPosition(0.8);
             }
             if (gamepad1.left_bumper) {
-                robot.claw.setPosition(0.2);
+                robot.baseClaw.setPosition(0.2);
             }
             if (gamepad1.y) {
                 robot.armMotor.setPower(0.25);
