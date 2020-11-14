@@ -12,7 +12,7 @@ public class DMHardware {
 
     // Instantiating the hardware classes
     public DcMotor leftMotor, rightMotor, armMotor;
-    public Servo baseClaw, ringClaw, ringArm;
+    public Servo claw, ringClaw, ringArm;
     public TouchSensor armLimiter;
 
     public boolean runThisWithEncoders;
@@ -36,14 +36,14 @@ public class DMHardware {
 
         // Adding variable names to the hardware...
 
-        baseClaw = hwMap.servo.get("base_claw");
-        baseClaw.setPosition(0.2);
+        claw = hwMap.servo.get("claw");
+        claw.setPosition(0.2);
 
         ringClaw = hwMap.servo.get("ring_claw");
-        ringClaw.setPosition(0.2);
+        //ringClaw.setPosition(0.2);
 
         ringArm = hwMap.servo.get("ring_arm");
-        ringArm.setPosition(0.2);
+        //ringArm.setPosition(0.2);
 
         armLimiter = hwMap.touchSensor.get("lift_limiter");
 
