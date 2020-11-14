@@ -21,15 +21,15 @@ public class ArmProtoDemo extends LinearOpMode {
                 robot.ringArm.setPosition(0.9);
             }
             if (gamepad1.a) {
-                robot.ringArm.setPosition(0);
+                robot.ringArm.setPosition(-0.1);
             }
 
 
             if (gamepad1.x) {
-                robot.ringClaw.setPosition(0.5);
+                robot.ringClaw.setPosition(0.52);
             }
             if (gamepad1.b) {
-                robot.ringClaw.setPosition(0.7);
+                robot.ringClaw.setPosition(0.3);
             }
 
         }

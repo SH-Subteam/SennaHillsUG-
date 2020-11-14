@@ -40,10 +40,10 @@ public class DMHardware {
         claw.setPosition(0.2);
 
         ringClaw = hwMap.servo.get("ring_claw");
-        ringClaw.setPosition(0.2);
+        //ringClaw.setPosition(0.2);
 
         ringArm = hwMap.servo.get("ring_arm");
-        ringArm.setPosition(0.2);
+        //ringArm.setPosition(0.2);
 
         armLimiter = hwMap.touchSensor.get("lift_limiter");
 
