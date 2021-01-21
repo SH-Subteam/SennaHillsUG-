@@ -4,8 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 
-@TeleOp(name = "ArmProtoDemo", group = "Dream Machines")
-public class ArmProtoDemo extends LinearOpMode {
+@TeleOp(name = "NewArmDemo", group = "Dream Machines")
+public class NewArm extends LinearOpMode {
     public DMHardware robot = new DMHardware(true);
 
     @Override
@@ -18,14 +18,15 @@ public class ArmProtoDemo extends LinearOpMode {
         while (opModeIsActive()) {
 
             if (gamepad1.y) {
-                robot.ringArm.setPosition(0.9);
+                robot.LiftMotor.setPower(0.25);
             }
-            if (gamepad1.a) {
-                robot.ringArm.setPosition(0.01);
+            else if (gamepad1.a) {
+                robot.LiftMotor.setPower(-0.25);
             }
-            if (gamepad1.dpad_up) {
-                robot.ringArm.setPosition(0.8);
+            else {
+                robot.LiftMotor.setPower(0);
             }
+
 
 
             if (gamepad1.x) {
