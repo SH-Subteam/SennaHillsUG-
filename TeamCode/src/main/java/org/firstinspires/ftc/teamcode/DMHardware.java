@@ -11,7 +11,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 public class DMHardware {
 
     // Instantiating the hardware classes
-    public DcMotor leftMotor, rightMotor, armMotor;
+    public DcMotor leftMotor, rightMotor, armMotor, LiftMotor;
     public Servo claw, ringClaw, ringArm;
     public TouchSensor armLimiter;
 
@@ -36,16 +36,16 @@ public class DMHardware {
 
         // Adding variable names to the hardware...
 
-        claw = hwMap.servo.get("claw");
-        claw.setPosition(0.2);
+        //claw = hwMap.servo.get("claw");
+        //claw.setPosition(0.2);
 
-        ringClaw = hwMap.servo.get("ring_claw");
+        //ringClaw = hwMap.servo.get("ring_claw");
         //ringClaw.setPosition(0.2);
 
-        ringArm = hwMap.servo.get("ring_arm");
+        //ringArm = hwMap.servo.get("ring_arm");
         //ringArm.setPosition(0.2);
 
-        armLimiter = hwMap.touchSensor.get("lift_limiter");
+        /*armLimiter = hwMap.touchSensor.get("lift_limiter");
 
         leftMotor = hwMap.dcMotor.get("left_motor");
         leftMotor.setDirection(DcMotor.Direction.REVERSE);
@@ -55,7 +55,10 @@ public class DMHardware {
         armMotor = hwMap.dcMotor.get("lift_motor");
 
         leftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
-        rightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        rightMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);*/
+
+        LiftMotor = hwMap.dcMotor.get("liftMotor");
+        LiftMotor.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
 
     }
 
